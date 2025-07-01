@@ -108,7 +108,7 @@ jobs:
         ngrok config add-authtoken 2zH1Z9iLo5xmAJ0mUGDyh7e7TGg_2vyegdEnRfpnDaEziDWQa
            
         # Start ngrok to proxy local VNC port 5999
-        ngrok tcp 5999 &
+        ngrok tcp 5900 &
         
         # Optional: wait a bit for ngrok to initialize
         sleep 600
