@@ -30,7 +30,7 @@ jobs:
 
     - name: Install Chromium
       run: |
-        mkdir -p /app/chromium
+        sudo mkdir -p /app/chromium
         wget -O chromium.tar.xz "https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/130.0.6723.91-1/ungoogled-chromium_130.0.6723.91-1_linux.tar.xz"
         tar -xf chromium.tar.xz -C /app/chromium
         rm chromium.tar.xz
