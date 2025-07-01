@@ -46,15 +46,15 @@ jobs:
     
     - name: Start virtual display (Xvfb)
       run: |
-        Xvfb :99 -screen 0 1920x1080x16 &
+        sudo Xvfb :99 -screen 0 1920x1080x16 &
         export DISPLAY=:99
         export XAUTHORITY=/root/.Xauthority
         sleep 5
-        touch /root/.Xauthority
-        xauth generate :99 . trusted
+        sudo touch /root/.Xauthority
+        sudo xauth generate :99 . trusted
         
         # Start x11vnc server on display :99 (VNC port 5999)
-        x11vnc -display :99 -nopw -forever -bg
+        x11vnc -display :99 -passwd pw -forever -bg
     
     
     - name: Run your tests or script
